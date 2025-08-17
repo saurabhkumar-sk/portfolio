@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Flutter Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="module" src="config.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">SK</div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Saurabh Kumar</span></h1>
+            <h2>Flutter Developer</h2>
+            <p>Passionate about creating beautiful and functional mobile applications</p>
+            <div class="hero-buttons">
+                <a href="https://drive.google.com/file/d/1nXahRswjhWjjOnkEMENsRH5HVijA0wu5/view?usp=sharing" class="btn primary" target="_blank">Download Resume</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/saurabhkumar-sk" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/saurabh-kumar-skr/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card flutter-card">
+                <div class="skill-icon">
+                    <img src="assets/image.png" alt="Flutter" class="flutter-logo">
+                </div>
+                <h3>Flutter</h3>
+            </div>
+            <div class="skill-card simple-card">
+                <i class="fas fa-code"></i>
+                <h3>Dart</h3>
+            </div>
+            <div class="skill-card simple-card">
+                <i class="fas fa-database"></i>
+                <h3>Firebase</h3>
+            </div>
+            <div class="skill-card simple-card">
+                <i class="fas fa-server"></i>
+                <h3>REST APIs</h3>
+            </div>
+            <div class="skill-card simple-card">
+                <i class="fab fa-node-js"></i>
+                <h3>Node.js</h3>
+            </div>
+            <div class="skill-card simple-card">
+                <i class="fab fa-git-alt"></i>
+                <h3>Git</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="education">Education</button>
+            <button class="filter-btn" data-category="healthcare">Healthcare</button>
+            <button class="filter-btn" data-category="service">Services</button>
+            <button class="filter-btn" data-category="news">News</button>
+            <button class="filter-btn" data-category="ecommerce">E-commerce</button>
+            <button class="filter-btn" data-category="weather">Weather</button>
+            <button class="filter-btn" data-category="real-estate">Real Estate</button>
+            <button class="filter-btn" data-category="grocery">Grocery</button>
+            <button class="filter-btn" data-category="utility">Utility</button>
+        </div>
+        <div class="projects-grid">
+            <!-- Project cards will be dynamically added via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn primary">Send Message</button>
+        </form>
+        <div id="form-message" class="form-message"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p class="copyright">Copyright © <span id="year"></span></p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
