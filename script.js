@@ -165,7 +165,7 @@ const projects = [
         techStack: ["Flutter", "REST API", "Firebase"],
         github: "https://github.com/saurabhkumar-sk/news-app",
         playStore: "https://play.google.com/store/apps/details?id=com.naukri.naukripoint",
-        appStore: "https://apps.apple.com/us/app/naukri-point/id6749142761"
+        appStore: "https://apps.apple.com/in/app/naukri-point-job-alerts/id6749142761"
     },
     {
         id: 16,
