@@ -1,6 +1,9 @@
+// Import config module
+import config from './config.js';
+
 // Initialize EmailJS
 (function () {
-    emailjs.init("wN5_Pi6myJY9hIg9w"); // Your EmailJS public key
+    emailjs.init(config.emailJs.publicKey); // Your EmailJS public key
 })();
 
 // DOM Elements
@@ -339,8 +342,8 @@ contactForm.addEventListener('submit', async (e) => {
 
     try {
         await emailjs.send(
-            'service_5obxcj1',
-            'template_eaztska',
+            config.emailJs.serviceId,
+            config.emailJs.templateId,
             formData
         );
 

@@ -16,8 +16,13 @@ jobs:
           echo "EMAILJS_SERVICE_ID=${{ secrets.EMAILJS_SERVICE_ID }}" >> .env
           echo "EMAILJS_TEMPLATE_ID=${{ secrets.EMAILJS_TEMPLATE_ID }}" >> .env
 
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
-          folder: .
+          folder: out
