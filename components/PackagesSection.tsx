@@ -36,7 +36,7 @@ export default function PackagesSection() {
           <div className="w-full lg:w-3/5 aspect-video lg:aspect-auto min-h-[300px] relative overflow-hidden bg-muted/20 border-b lg:border-b-0 lg:border-r border-border/50">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="assets/imagex_banner.jpg"
+              src="/portfolio/assets/imagex_banner.jpg"
               alt="ImageX Flutter Infographic Specs"
               className="w-full h-full object-contain p-4 bg-zinc-950 group-hover:scale-[1.01] transition-transform duration-500"
             />

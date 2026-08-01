@@ -261,7 +261,7 @@ export default function HomePage() {
       id: "imagex_flutter",
       title: "ImageX Flutter",
       description: "A premium, unified image rendering widget for Flutter that replaces Image.network, Image.asset, CachedNetworkImage, and flutter_svg with automatic source detection, placeholders, shimmer, error builders, caching, and zoom viewers.",
-      image: "assets/imagex_banner.jpg",
+      image: "/portfolio/assets/imagex_banner.jpg",
       category: "featured",
       techStack: ["Flutter", "Dart", "CachedNetworkImage", "SVG Picture", "Shimmer"],
       github: "https://github.com/saurabhkumar-sk/imagex_flutter",
@@ -269,7 +269,7 @@ export default function HomePage() {
       isFeatured: true,
       featuredPath: "/projects/imagex-flutter",
       slides: [
-        { type: "image", value: "assets/imagex_banner.jpg", name: "ImageX Package Infographic" },
+        { type: "image", value: "/portfolio/assets/imagex_banner.jpg", name: "ImageX Package Infographic" },
         { type: "desktop", name: "Desktop Web Preview" },
         { type: "mobile", name: "Mobile App Preview" },
       ]
@@ -679,7 +679,7 @@ export default function HomePage() {
                       <div className="relative w-20 h-20 rounded-full overflow-hidden border-2 border-border shadow-lg bg-card">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                          src="assets/profile.jpeg"
+                          src="/portfolio/assets/profile.jpeg"
                           alt="Saurabh Kumar"
                           className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                         />
