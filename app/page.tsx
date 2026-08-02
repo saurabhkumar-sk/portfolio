@@ -591,7 +591,7 @@ export default function HomePage() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-xl sm:text-2xl font-semibold text-muted-foreground mb-6"
               >
-                Senior Flutter Developer
+                Building Beautiful &amp; Scalable Flutter Apps
               </motion.h2>
 
               <motion.p
@@ -667,9 +667,6 @@ export default function HomePage() {
                 <div className="h-full flex flex-col justify-between">
                   <div className="flex justify-between items-start">
                     <span className="text-xs font-mono opacity-50">PORTFOLIO CARD // DRAG ME</span>
-                    <div className="px-2 py-1 rounded bg-blue-500/10 text-blue-500 text-[10px] font-mono">
-                      v2.0
-                    </div>
                   </div>
 
                   <div className="my-auto space-y-4">

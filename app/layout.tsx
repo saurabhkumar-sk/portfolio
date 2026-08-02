@@ -9,7 +9,7 @@ const fontSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Saurabh Kumar | Senior Flutter Engineer & ImageX Flutter",
+  title: "Saurabh Kumar | ImageX Flutter",
   description: "Personal portfolio website of Saurabh Kumar showcasing ImageX Flutter — a premium, high-performance Flutter package that simplifies image rendering from Network, Asset, SVG, File, and Memory sources.",
   keywords: [
     "Flutter",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Saurabh Kumar" }],
   openGraph: {
-    title: "Saurabh Kumar | Senior Flutter Engineer & ImageX Flutter",
+    title: "Saurabh Kumar | ImageX Flutter",
     description: "Showcasing ImageX Flutter, a premium reusable image loading widget for Flutter with built-in caching, placeholders, shimmer, and full-screen viewers.",
     url: "https://github.com/saurabhkumar-sk/imagex_flutter",
     siteName: "Saurabh Kumar Portfolio",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Saurabh Kumar | Senior Flutter Engineer & ImageX Flutter",
+    title: "Saurabh Kumar | ImageX Flutter",
     description: "Showcasing ImageX Flutter, a premium reusable image loading widget for Flutter with caching, SVG support, and custom builders.",
     creator: "@saurabh_kumar",
   },
