@@ -537,13 +537,18 @@ export default function HomePage() {
         setFormStatus("idle");
         setFormMsg("");
       }, 4000);
-    } catch (err) {
+    } catch (err: any) {
+      console.error("EmailJS Error:", err);
       setFormStatus("error");
-      setFormMsg("Failed to send message. Please try again.");
+      const detailedError = err?.text || err?.message || (typeof err === "string" ? err : "");
+      const errorMsg = detailedError 
+        ? `Failed to send message: ${detailedError}` 
+        : "Failed to send message. Please check your credentials or network and try again.";
+      setFormMsg(errorMsg);
       setTimeout(() => {
         setFormStatus("idle");
         setFormMsg("");
-      }, 4000);
+      }, 8000);
     }
   };
 
@@ -684,7 +689,15 @@ export default function HomePage() {
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold">Saurabh Kumar</h3>
-                      <p className="text-sm text-muted-foreground">saurabhkumar91536@gmail.com</p>
+                      <p className="text-sm text-muted-foreground mb-1">saurabhkumar91536@gmail.com</p>
+                      <a
+                        href="https://saurabhkumar-sk.github.io/portfolio/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-blue-500 hover:text-blue-400 hover:underline break-all"
+                      >
+                        https://saurabhkumar-sk.github.io/portfolio/
+                      </a>
                     </div>
                     <div className="flex flex-wrap gap-1.5 pt-2">
                       <span className="text-[11px] px-2 py-0.5 rounded-full border border-border bg-background/50 font-mono">#Flutter</span>
@@ -926,8 +939,6 @@ export default function HomePage() {
 
         <PackagesSection />
 
-        <ApiSection />
-
         {/* Contact Section */}
         <section id="contact" className="py-24 bg-card/10 border-t border-border/50 relative">
           <div className="max-w-md mx-auto px-6 flex flex-col items-center">
@@ -949,6 +960,7 @@ export default function HomePage() {
                   name="name"
                   value={formState.name}
                   onChange={handleInputChange}
+                  disabled={formStatus === "sending"}
                   className={`w-full px-4 py-2.5 rounded-xl border bg-card/50 text-foreground text-sm focus:outline-none focus:ring-1 transition-colors ${
                     formErrors.name ? "border-red-500 focus:ring-red-500" : "border-border focus:ring-blue-500"
                   }`}
@@ -968,6 +980,7 @@ export default function HomePage() {
                   name="email"
                   value={formState.email}
                   onChange={handleInputChange}
+                  disabled={formStatus === "sending"}
                   className={`w-full px-4 py-2.5 rounded-xl border bg-card/50 text-foreground text-sm focus:outline-none focus:ring-1 transition-colors ${
                     formErrors.email ? "border-red-500 focus:ring-red-500" : "border-border focus:ring-blue-500"
                   }`}
@@ -987,6 +1000,7 @@ export default function HomePage() {
                   rows={4}
                   value={formState.message}
                   onChange={handleInputChange}
+                  disabled={formStatus === "sending"}
                   className={`w-full px-4 py-2.5 rounded-xl border bg-card/50 text-foreground text-sm focus:outline-none focus:ring-1 transition-colors resize-none ${
                     formErrors.message ? "border-red-500 focus:ring-red-500" : "border-border focus:ring-blue-500"
                   }`}

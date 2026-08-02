@@ -51,7 +51,7 @@ export default function Footer() {
             <Linkedin className="h-4 w-4" />
           </a>
           <a
-            href="mailto:saurabhkumar91536@gmail.com"
+            href="mailto:saurabhkumar91536@gmail.com?subject=Portfolio%20Inquiry"
             className="p-2 rounded-full border border-border bg-card hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Email"
           >

@@ -85,7 +85,7 @@ export default function Navbar() {
               {link.name}
             </button>
           ))}
-          {isImageXPage && (
+          {isImageXPage ? (
             <a
               href="https://pub.dev/packages/imagex_flutter"
               target="_blank"
@@ -94,6 +94,13 @@ export default function Navbar() {
             >
               Get Package
             </a>
+          ) : (
+            <button
+              onClick={() => handleLinkClick("#packages")}
+              className="px-4 py-1.5 rounded-full text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-colors"
+            >
+              Get Packages
+            </button>
           )}
           <ThemeToggle />
         </nav>
@@ -130,7 +137,7 @@ export default function Navbar() {
                   {link.name}
                 </button>
               ))}
-              {isImageXPage && (
+              {isImageXPage ? (
                 <a
                   href="https://pub.dev/packages/imagex_flutter"
                   target="_blank"
@@ -139,6 +146,13 @@ export default function Navbar() {
                 >
                   Get Package
                 </a>
+              ) : (
+                <button
+                  onClick={() => handleLinkClick("#packages")}
+                  className="w-full text-center py-2.5 rounded-lg text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white transition-colors"
+                >
+                  Get Packages
+                </button>
               )}
             </div>
           </motion.div>
