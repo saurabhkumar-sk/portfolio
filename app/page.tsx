@@ -11,6 +11,7 @@ import {
   Send,
   Check,
   Download,
+  FileText,
   ExternalLink,
   Code,
   Layers,
@@ -614,15 +615,13 @@ export default function HomePage() {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
               >
-                <a
-                  href="https://drive.google.com/file/d/1GqwtaZcYvBIzuA6SLbQUgEvNvLARFniH/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/resume"
                   className="inline-flex items-center justify-center space-x-2 px-8 py-3.5 rounded-full bg-foreground text-background font-semibold hover:opacity-90 transition-opacity w-full sm:w-auto shadow-md"
                 >
-                  <Download className="h-4 w-4" />
-                  <span>Download Resume</span>
-                </a>
+                  <FileText className="h-4 w-4" />
+                  <span>View Resume</span>
+                </Link>
                 <a
                   href="#contact"
                   className="inline-flex items-center justify-center space-x-2 px-8 py-3.5 rounded-full border border-border bg-card/50 text-foreground font-semibold hover:bg-muted/80 transition-colors w-full sm:w-auto"
